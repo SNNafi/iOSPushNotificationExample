@@ -16,14 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, _ in
-            
-            guard granted else { return }
-            
-            DispatchQueue.main.async {
-                application.registerForRemoteNotifications()
-            }
-        }
+        registerForPushNotifications(application: application)
         return true
     }
     
@@ -51,6 +44,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             String(format: "%02x", $1) }
         print(token)
         // 33aa4c82d047e9746b47ddfef3badc3e3fd1b4cf17a025fe5fea63a8cc87e953
+        
+        sendPushNotificationDetails(to: "https://app.snnafi.com/api/Antenna/add_token.php", using: deviceToken)
+       
     }
     
     // iOS will call this method when it fails to register the device for pushes

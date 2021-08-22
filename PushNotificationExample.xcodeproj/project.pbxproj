@@ -17,6 +17,8 @@
 		C73E912926CCE4D000EDBC1C /* PushNotificationExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73E912826CCE4D000EDBC1C /* PushNotificationExampleUITests.swift */; };
 		C7BF75EB26CCF528007B686F /* AuthKey_P4N6CQ7RQ9.p8 in Resources */ = {isa = PBXBuildFile; fileRef = C7BF75EA26CCF528007B686F /* AuthKey_P4N6CQ7RQ9.p8 */; };
 		C7BF75ED26CCF81C007B686F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF75EC26CCF81C007B686F /* Credentials.swift */; };
+		C7C7606926D290CC00866CF4 /* TokenDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606826D290CC00866CF4 /* TokenDetails.swift */; };
+		C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		C73E913626CCE60100EDBC1C /* PushNotificationExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotificationExample.entitlements; sourceTree = "<group>"; };
 		C7BF75EA26CCF528007B686F /* AuthKey_P4N6CQ7RQ9.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_P4N6CQ7RQ9.p8; sourceTree = "<group>"; };
 		C7BF75EC26CCF81C007B686F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		C7C7606826D290CC00866CF4 /* TokenDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDetails.swift; sourceTree = "<group>"; };
+		C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApnsUploads.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		C73E910526CCE4CD00EDBC1C /* PushNotificationExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7C7606726D28FE500866CF4 /* Model */,
 				C7BF75E926CCF50F007B686F /* SecureFile */,
 				C7BF75E826CCF011007B686F /* View */,
 				C7BF75E726CCF005007B686F /* App */,
@@ -147,6 +152,7 @@
 			children = (
 				C73E910626CCE4CD00EDBC1C /* AppDelegate.swift */,
 				C73E910826CCE4CD00EDBC1C /* SceneDelegate.swift */,
+				C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -166,6 +172,14 @@
 				C7BF75EC26CCF81C007B686F /* Credentials.swift */,
 			);
 			path = SecureFile;
+			sourceTree = "<group>";
+		};
+		C7C7606726D28FE500866CF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7606826D290CC00866CF4 /* TokenDetails.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +315,9 @@
 			files = (
 				C73E910726CCE4CD00EDBC1C /* AppDelegate.swift in Sources */,
 				C73E910926CCE4CD00EDBC1C /* SceneDelegate.swift in Sources */,
+				C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */,
 				C73E910B26CCE4CD00EDBC1C /* PushNotificationView.swift in Sources */,
+				C7C7606926D290CC00866CF4 /* TokenDetails.swift in Sources */,
 				C7BF75ED26CCF81C007B686F /* Credentials.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
