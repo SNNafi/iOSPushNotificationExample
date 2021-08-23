@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct PushNotificationView: View {
+    
+    @EnvironmentObject var notificationDelegate: NotificationDelegate
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("Hello, world!")
+                    .padding()
+                    .onAppear {
+                        print(notificationDelegate.isNotificationView)
+                    }
+                
+                NavigationLink("", destination: NotificationInfoView(), isActive: $notificationDelegate.isNotificationView)
+            }
+        }
     }
 }
 

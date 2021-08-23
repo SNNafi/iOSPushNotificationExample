@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,11 @@
 		C7BF75ED26CCF81C007B686F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BF75EC26CCF81C007B686F /* Credentials.swift */; };
 		C7C7606926D290CC00866CF4 /* TokenDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606826D290CC00866CF4 /* TokenDetails.swift */; };
 		C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */; };
+		C7C7606D26D2A1EA00866CF4 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606C26D2A1EA00866CF4 /* NotificationDelegate.swift */; };
+		C7C7606F26D2AF2D00866CF4 /* NotificationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */; };
+		C7C7607226D2B1FF00866CF4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7607126D2B1FF00866CF4 /* Kingfisher */; };
+		C7C7607526D393A500866CF4 /* add_token.php in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607426D393A500866CF4 /* add_token.php */; };
+		C7C7607726D3941D00866CF4 /* send_push.php in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607626D3941D00866CF4 /* send_push.php */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,10 @@
 		C7BF75EC26CCF81C007B686F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		C7C7606826D290CC00866CF4 /* TokenDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDetails.swift; sourceTree = "<group>"; };
 		C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApnsUploads.swift; sourceTree = "<group>"; };
+		C7C7606C26D2A1EA00866CF4 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfoView.swift; sourceTree = "<group>"; };
+		C7C7607426D393A500866CF4 /* add_token.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_token.php; sourceTree = "<group>"; };
+		C7C7607626D3941D00866CF4 /* send_push.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_push.php; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C7607226D2B1FF00866CF4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,7 @@
 		C73E90FA26CCE4CC00EDBC1C = {
 			isa = PBXGroup;
 			children = (
+				C7C7607326D3939400866CF4 /* WebFile */,
 				C73E910526CCE4CD00EDBC1C /* PushNotificationExample */,
 				C73E911C26CCE4D000EDBC1C /* PushNotificationExampleTests */,
 				C73E912726CCE4D000EDBC1C /* PushNotificationExampleUITests */,
@@ -153,6 +164,7 @@
 				C73E910626CCE4CD00EDBC1C /* AppDelegate.swift */,
 				C73E910826CCE4CD00EDBC1C /* SceneDelegate.swift */,
 				C7C7606A26D2965B00866CF4 /* ApnsUploads.swift */,
+				C7C7606C26D2A1EA00866CF4 /* NotificationDelegate.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				C73E910A26CCE4CD00EDBC1C /* PushNotificationView.swift */,
+				C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +195,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C7C7607326D3939400866CF4 /* WebFile */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7607426D393A500866CF4 /* add_token.php */,
+				C7C7607626D3941D00866CF4 /* send_push.php */,
+			);
+			path = WebFile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +220,9 @@
 			dependencies = (
 			);
 			name = PushNotificationExample;
+			packageProductDependencies = (
+				C7C7607126D2B1FF00866CF4 /* Kingfisher */,
+			);
 			productName = PushNotificationExample;
 			productReference = C73E910326CCE4CC00EDBC1C /* PushNotificationExample.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +294,9 @@
 				Base,
 			);
 			mainGroup = C73E90FA26CCE4CC00EDBC1C;
+			packageReferences = (
+				C7C7607026D2B1FF00866CF4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C73E910426CCE4CC00EDBC1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -316,9 +344,13 @@
 				C73E910726CCE4CD00EDBC1C /* AppDelegate.swift in Sources */,
 				C73E910926CCE4CD00EDBC1C /* SceneDelegate.swift in Sources */,
 				C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */,
+				C7C7606F26D2AF2D00866CF4 /* NotificationInfoView.swift in Sources */,
 				C73E910B26CCE4CD00EDBC1C /* PushNotificationView.swift in Sources */,
+				C7C7606D26D2A1EA00866CF4 /* NotificationDelegate.swift in Sources */,
+				C7C7607726D3941D00866CF4 /* send_push.php in Sources */,
 				C7C7606926D290CC00866CF4 /* TokenDetails.swift in Sources */,
 				C7BF75ED26CCF81C007B686F /* Credentials.swift in Sources */,
+				C7C7607526D393A500866CF4 /* add_token.php in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -471,7 +503,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -649,6 +681,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7C7607026D2B1FF00866CF4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7C7607126D2B1FF00866CF4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7C7607026D2B1FF00866CF4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C73E90FB26CCE4CC00EDBC1C /* Project object */;
 }

@@ -12,9 +12,12 @@ extension AppDelegate {
     /// Request for push notification
     /// - Parameter application: `UIApplication` object
     func registerForPushNotifications(application: UIApplication) {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, _ in
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) {[weak self]  granted, _ in
             
-            guard granted else { return }
+            guard let self = self, granted else { return }
+            
+            center.delegate = self.notificationDelegate
             
             DispatchQueue.main.async {
                 application.registerForRemoteNotifications()
