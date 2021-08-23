@@ -23,14 +23,16 @@ $payload = [
         'title' => 'Sea Boat',
         'image' => 'https://images.pexels.com/photos/2249602/pexels-photo-2249602.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
         ],
-  'aps' => [
-    'alert' => [
-      'title' => 'Hellp',
-       'body' => 'iOS Push Notification',
-    ],
-    'category' => 'proposal',
-    'sound'=> 'default',
-  ],
+    'aps' => [
+        'alert' => [
+          'title' => 'Uryyb',
+          'body' => 'vBF Chfu Abgvsvpngvba',
+        ],
+        'category' => 'nil',
+        'sound'=> 'default',
+        'badge' => 1,
+        'mutable-content' => 1
+      ],
 ];
 
 
@@ -74,14 +76,10 @@ function sendNotification($debug, $token) {
     'apns-push-type: background'
     ]);
     $server = $debug ? 'api.development' : 'api';
-   
 
-    
-        
         $url = "https://$server.push.apple.com/3/device/$token";
         curl_setopt($ch, CURLOPT_URL, "{$url}");
         
-       
         $response = curl_exec($ch);
         
         if ($response === false) {
