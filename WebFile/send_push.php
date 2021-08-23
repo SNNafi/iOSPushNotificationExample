@@ -28,6 +28,7 @@ $payload = [
       'title' => 'Hellp',
        'body' => 'iOS Push Notification',
     ],
+    'category' => 'proposal',
     'sound'=> 'default',
   ],
 ];

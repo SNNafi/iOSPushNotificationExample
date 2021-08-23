@@ -30,17 +30,35 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, Ob
         
         defer { completionHandler() }
         
-        guard response.actionIdentifier == UNNotificationDefaultActionIdentifier else {
-            return
-        }
-        
-        if response.notification.request.content.userInfo["notification"] != nil {
+        if response.notification.request.content.categoryIdentifier == "nil" {
             
-            guard let notification = (response.notification.request.content.userInfo["notification"] as? [String: String]), let title = notification["title"], let imageUrl = notification["image"]  else { return }
+            //  This is called for normal tap
+            guard response.actionIdentifier == UNNotificationDefaultActionIdentifier else {
+                return
+            }
             
-            notificationText = title
-            notificationImageUrl = imageUrl
-            isNotificationView = true
+            if response.notification.request.content.userInfo["notification"] != nil {
+                
+                guard let notification = (response.notification.request.content.userInfo["notification"] as? [String: String]), let title = notification["title"], let imageUrl = notification["image"]  else { return }
+                
+                notificationText = title
+                notificationImageUrl = imageUrl
+                isNotificationView = true
+            }
+            
+        } else {
+            let identity = response.notification.request.content.categoryIdentifier
+            guard identity == categoryIdentifier,
+                  let action = Proposal(rawValue: response.actionIdentifier) else {
+                return
+            }
+            
+            switch action {
+            case .accept:
+                ProposalCounter.shared.accepted+=1
+            case .reject:
+                ProposalCounter.shared.accepted-=1
+            }
         }
     }
 }

@@ -10,6 +10,12 @@ import UserNotifications
 import Defaults
 
 
+public let categoryIdentifier = "proposal"
+
+public enum Proposal: String {
+    case accept, reject
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -47,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 33aa4c82d047e9746b47ddfef3badc3e3fd1b4cf17a025fe5fea63a8cc87e953
         
         sendPushNotificationDetails(to: "https://app.snnafi.com/api/Antenna/add_token.php", using: deviceToken)
+        registerCustomActions()
         
     }
     
@@ -65,6 +72,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Defaults[.backgroundUpdatedTitle] = title
         Defaults[.backgroundUpdatedImageUrl] = imageUrl
         completionHandler(.newData)
+    }
+    
+    // Custom action for notification
+    private func registerCustomActions() {
+        let accept = UNNotificationAction(identifier: Proposal.accept.rawValue,
+                                          title: "Accept")
+        let reject = UNNotificationAction( identifier: Proposal.reject.rawValue,
+                                           title: "Reject")
+        let proposal = UNNotificationCategory( identifier: categoryIdentifier, actions: [accept, reject], intentIdentifiers: [])
+        UNUserNotificationCenter.current().setNotificationCategories([proposal])
     }
 }
 

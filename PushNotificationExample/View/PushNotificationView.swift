@@ -16,13 +16,15 @@ struct PushNotificationView: View {
             VStack {
                 Text("Hello, world!")
                     .padding()
-                    .onAppear {
-                        print(notificationDelegate.isNotificationView)
-                    }
                 NavigationLink(
                     destination: BackgroundUpdateView(),
                     label: {
                         Text("Background Updates")
+                    })
+                NavigationLink(
+                    destination: ProposalView(),
+                    label: {
+                        Text("Proposal View")
                     })
                 
                 NavigationLink("", destination: NotificationInfoView(), isActive: $notificationDelegate.isNotificationView)

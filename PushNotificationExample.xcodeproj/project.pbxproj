@@ -27,6 +27,9 @@
 		C7C7607926D3982100866CF4 /* BackgroundUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */; };
 		C7C7607C26D39E1100866CF4 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7607B26D39E1100866CF4 /* Defaults */; };
 		C7C7607F26D39E7B00866CF4 /* Defaults+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607E26D39E7B00866CF4 /* Defaults+Ex.swift */; };
+		C7C7608126D3AAA600866CF4 /* ProposalCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7608026D3AAA600866CF4 /* ProposalCounter.swift */; };
+		C7C7608326D3AB6100866CF4 /* ProposalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7608226D3AB6100866CF4 /* ProposalView.swift */; };
+		C7C7608526D3ABD900866CF4 /* CircledCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7608426D3ABD900866CF4 /* CircledCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		C7C7607626D3941D00866CF4 /* send_push.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_push.php; sourceTree = "<group>"; };
 		C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUpdateView.swift; sourceTree = "<group>"; };
 		C7C7607E26D39E7B00866CF4 /* Defaults+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Ex.swift"; sourceTree = "<group>"; };
+		C7C7608026D3AAA600866CF4 /* ProposalCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalCounter.swift; sourceTree = "<group>"; };
+		C7C7608226D3AB6100866CF4 /* ProposalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalView.swift; sourceTree = "<group>"; };
+		C7C7608426D3ABD900866CF4 /* CircledCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircledCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,8 @@
 				C73E910A26CCE4CD00EDBC1C /* PushNotificationView.swift */,
 				C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */,
 				C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */,
+				C7C7608226D3AB6100866CF4 /* ProposalView.swift */,
+				C7C7608426D3ABD900866CF4 /* CircledCounterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				C7C7606826D290CC00866CF4 /* TokenDetails.swift */,
+				C7C7608026D3AAA600866CF4 /* ProposalCounter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,6 +370,9 @@
 			files = (
 				C7C7607F26D39E7B00866CF4 /* Defaults+Ex.swift in Sources */,
 				C73E910726CCE4CD00EDBC1C /* AppDelegate.swift in Sources */,
+				C7C7608326D3AB6100866CF4 /* ProposalView.swift in Sources */,
+				C7C7608526D3ABD900866CF4 /* CircledCounterView.swift in Sources */,
+				C7C7608126D3AAA600866CF4 /* ProposalCounter.swift in Sources */,
 				C73E910926CCE4CD00EDBC1C /* SceneDelegate.swift in Sources */,
 				C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */,
 				C7C7606F26D2AF2D00866CF4 /* NotificationInfoView.swift in Sources */,
