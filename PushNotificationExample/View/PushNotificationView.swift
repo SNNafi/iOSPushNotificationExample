@@ -19,6 +19,11 @@ struct PushNotificationView: View {
                     .onAppear {
                         print(notificationDelegate.isNotificationView)
                     }
+                NavigationLink(
+                    destination: BackgroundUpdateView(),
+                    label: {
+                        Text("Background Updates")
+                    })
                 
                 NavigationLink("", destination: NotificationInfoView(), isActive: $notificationDelegate.isNotificationView)
             }

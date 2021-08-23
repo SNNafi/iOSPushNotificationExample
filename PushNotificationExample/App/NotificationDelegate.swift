@@ -12,7 +12,7 @@ final class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate, Ob
     
     @Published var isNotificationView = false
     @Published var notificationText = ""
-    @Published var notificationImageUrl = "https://snnafi.com"
+    @Published var notificationImageUrl = "https://app.snnafi.com/assets/images/banner/snnaafiii.jpg"
     
     // Display push notification when app in foreground
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {

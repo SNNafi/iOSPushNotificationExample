@@ -19,6 +19,10 @@ $payload = [
         'title' => 'Forest Trees',
         'image' => 'https://images.pexels.com/photos/957024/forest-trees-perspective-bright-957024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
         ],
+    'background' => [
+        'title' => 'Sea Boat',
+        'image' => 'https://images.pexels.com/photos/2249602/pexels-photo-2249602.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+        ],
   'aps' => [
     'alert' => [
       'title' => 'Hellp',
@@ -66,7 +70,7 @@ function sendNotification($debug, $token) {
     curl_setopt($ch, CURLOPT_HTTPHEADER, [
         'apns-topic: ' . BUNDLE_ID,
         'authorization: bearer ' . generateAuthenticationHeader(),
-    'apns-push-type: alert'
+    'apns-push-type: background'
     ]);
     $server = $debug ? 'api.development' : 'api';
    

@@ -7,6 +7,7 @@
 
 import UIKit
 import UserNotifications
+import Defaults
 
 
 @main
@@ -52,6 +53,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // iOS will call this method when it fails to register the device for pushes
     func application(
         _ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) { print(error)
+    }
+    
+    // Background Update Silent Notification
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("background")
+        guard let background = (userInfo["background"] as? [String: String]), let title = background["title"], let imageUrl = background["image"]  else {
+            completionHandler(.noData)
+            return
+        }
+        Defaults[.backgroundUpdatedTitle] = title
+        Defaults[.backgroundUpdatedImageUrl] = imageUrl
+        completionHandler(.newData)
     }
 }
 

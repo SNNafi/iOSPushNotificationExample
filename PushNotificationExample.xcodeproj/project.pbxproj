@@ -24,6 +24,9 @@
 		C7C7607226D2B1FF00866CF4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7607126D2B1FF00866CF4 /* Kingfisher */; };
 		C7C7607526D393A500866CF4 /* add_token.php in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607426D393A500866CF4 /* add_token.php */; };
 		C7C7607726D3941D00866CF4 /* send_push.php in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607626D3941D00866CF4 /* send_push.php */; };
+		C7C7607926D3982100866CF4 /* BackgroundUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */; };
+		C7C7607C26D39E1100866CF4 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = C7C7607B26D39E1100866CF4 /* Defaults */; };
+		C7C7607F26D39E7B00866CF4 /* Defaults+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C7607E26D39E7B00866CF4 /* Defaults+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,8 @@
 		C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationInfoView.swift; sourceTree = "<group>"; };
 		C7C7607426D393A500866CF4 /* add_token.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = add_token.php; sourceTree = "<group>"; };
 		C7C7607626D3941D00866CF4 /* send_push.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = send_push.php; sourceTree = "<group>"; };
+		C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundUpdateView.swift; sourceTree = "<group>"; };
+		C7C7607E26D39E7B00866CF4 /* Defaults+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C7607C26D39E1100866CF4 /* Defaults in Frameworks */,
 				C7C7607226D2B1FF00866CF4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +125,7 @@
 		C73E910526CCE4CD00EDBC1C /* PushNotificationExample */ = {
 			isa = PBXGroup;
 			children = (
+				C7C7607D26D39E4F00866CF4 /* Extension */,
 				C7C7606726D28FE500866CF4 /* Model */,
 				C7BF75E926CCF50F007B686F /* SecureFile */,
 				C7BF75E826CCF011007B686F /* View */,
@@ -174,6 +181,7 @@
 			children = (
 				C73E910A26CCE4CD00EDBC1C /* PushNotificationView.swift */,
 				C7C7606E26D2AF2D00866CF4 /* NotificationInfoView.swift */,
+				C7C7607826D3982100866CF4 /* BackgroundUpdateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,6 +212,14 @@
 			path = WebFile;
 			sourceTree = "<group>";
 		};
+		C7C7607D26D39E4F00866CF4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C7C7607E26D39E7B00866CF4 /* Defaults+Ex.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -222,6 +238,7 @@
 			name = PushNotificationExample;
 			packageProductDependencies = (
 				C7C7607126D2B1FF00866CF4 /* Kingfisher */,
+				C7C7607B26D39E1100866CF4 /* Defaults */,
 			);
 			productName = PushNotificationExample;
 			productReference = C73E910326CCE4CC00EDBC1C /* PushNotificationExample.app */;
@@ -296,6 +313,7 @@
 			mainGroup = C73E90FA26CCE4CC00EDBC1C;
 			packageReferences = (
 				C7C7607026D2B1FF00866CF4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C7C7607A26D39E1100866CF4 /* XCRemoteSwiftPackageReference "Defaults" */,
 			);
 			productRefGroup = C73E910426CCE4CC00EDBC1C /* Products */;
 			projectDirPath = "";
@@ -341,11 +359,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C7607F26D39E7B00866CF4 /* Defaults+Ex.swift in Sources */,
 				C73E910726CCE4CD00EDBC1C /* AppDelegate.swift in Sources */,
 				C73E910926CCE4CD00EDBC1C /* SceneDelegate.swift in Sources */,
 				C7C7606B26D2965B00866CF4 /* ApnsUploads.swift in Sources */,
 				C7C7606F26D2AF2D00866CF4 /* NotificationInfoView.swift in Sources */,
 				C73E910B26CCE4CD00EDBC1C /* PushNotificationView.swift in Sources */,
+				C7C7607926D3982100866CF4 /* BackgroundUpdateView.swift in Sources */,
 				C7C7606D26D2A1EA00866CF4 /* NotificationDelegate.swift in Sources */,
 				C7C7607726D3941D00866CF4 /* send_push.php in Sources */,
 				C7C7606926D290CC00866CF4 /* TokenDetails.swift in Sources */,
@@ -691,6 +711,14 @@
 				minimumVersion = 6.3.1;
 			};
 		};
+		C7C7607A26D39E1100866CF4 /* XCRemoteSwiftPackageReference "Defaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/Defaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -698,6 +726,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C7C7607026D2B1FF00866CF4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		C7C7607B26D39E1100866CF4 /* Defaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7C7607A26D39E1100866CF4 /* XCRemoteSwiftPackageReference "Defaults" */;
+			productName = Defaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
